@@ -1,0 +1,35 @@
+Script started on 2024-05-25 09:47:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="85" LINES="36"]
+[?2004h]0;root@srv524657: ~/code/Projects/terminal/src/app/modules/terminalroot@srv524657:~/code/Projects/terminal/src/app/modules/terminal# [7mnpm install expr123[27m 
+[7mnpm install react[27m
+[7mnpm install mongodb[27m
+[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnpm install expr123 
+npm install react
+npm install mongodb
+[A
+[?2004l[?25l([100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂[0m) ⠦ idealTree:terminal: [7msill[0m [35midealTree[0m buildDeps[0m[K([100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂[0m) ⠦ idealTree:terminal: [7msill[0m [35midealTree[0m buildDeps[0m[K([100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂[0m) ⠧ idealTree:terminal: [7msill[0m [35midealTree[0m buildDeps[0m[K[K[?25h[37;40mnpm[0m [0m[31;40mERR![0m [0m[35mcode[0m E404
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35m404[0m Not Found - GET https://registry.npmjs.org/expr123 - Not found
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35m404[0m 
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35m404[0m  'expr123@*' is not in this registry.
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35m404[0m 
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35m404[0m Note that you can also install from a
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35m404[0m tarball, folder, http url, or git url.
+[0m
+[37;40mnpm[0m [0m[31;40mERR![0m[35m[0m A complete log of this run can be found in: /root/.npm/_logs/2024-05-25T09_47_08_919Z-debug-0.log
+[0m[?25l([100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂[0m) ⠦ idealTree:terminal: [7msill[0m [35midealTree[0m buildDeps[0m[K([107;97m#########[0m[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂[0m) ⠇ idealTree: [32;40mtiming[0m [35midealTree[0m Completed in 185ms[0m[K([107;97m##################[0m) ⠦ reify:fsevents: [7msill[0m [35mreify[0m mark deleted [ '/root/code/Project[0m[K([107;97m##################[0m) ⠙ reify:fsevents: [7msill[0m [35mreify[0m mark deleted [ '/root/code/Project[0m[K([107;97m##################[0m) ⠹ reify:fsevents: [7msill[0m [35mreify[0m mark deleted [ '/root/code/Project[0m[K([107;97m##################[0m) ⠹ reify:fsevents: [7msill[0m [35mreify[0m mark deleted [ '/root/code/Project[0m[K[K[?25h
+up to date, audited 132 packages in 679ms
+
+19 packages are looking for funding
+  run `npm fund` for details
+
+found [32m[1m0[22m[39m vulnerabilities
+[?25l([100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂[0m) ⠦ idealTree:terminal: [7msill[0m [35midealTree[0m buildDeps[0m[K([100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂[0m) ⠏ idealTree:terminal: [7msill[0m [35midealTree[0m buildDeps[0m[K([100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂[0m) ⠏ idealTree:terminal: [7msill[0m [35midealTree[0m buildDeps[0m[K([107;97m##################[0m) ⠋ reify:fsevents: [7msill[0m [35mreify[0m mark deleted [ '/root/code/Project[0m[K([107;97m##################[0m) ⠴ reify:fsevents: [7msill[0m [35mreify[0m mark deleted [ '/root/code/Project[0m[K([107;97m##################[0m) ⠦ reify:fsevents: [7msill[0m [35mreify[0m mark deleted [ '/root/code/Project[0m[K([107;97m##################[0m) ⠦ reify:fsevents: [7msill[0m [35mreify[0m mark deleted [ '/root/code/Project[0m[K[K[?25h
+up to date, audited 132 packages in 806ms
+
+19 packages are looking for funding
+  run `npm fund` for details
+
+found [32m[1m0[22m[39m vulnerabilities
+[?2004h]0;root@srv524657: ~/code/Projects/terminal/src/app/modules/terminalroot@srv524657:~/code/Projects/terminal/src/app/modules/terminal# exit
+[?2004lexit
+
+Script done on 2024-05-25 09:47:16+00:00 [COMMAND_EXIT_CODE="0"]

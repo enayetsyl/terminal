@@ -1,55 +1,47 @@
-import cron from 'node-cron';
-import mongoose from 'mongoose';
 import { exec } from 'child_process';
-import { Request } from './terminal.model.js';
+import fs from 'fs';
+import { spawn } from 'child_process';
 
+// Ensure logs directory exists
+if (!fs.existsSync('./videos')) {
+  fs.mkdirSync('./videos');
+}
 
-const checkAndExecuteRequests = async () => {
-  try {
-      // Find pending requests
-    const pendingRequests = await Request.find({ status: 'pending' });
-    console.log(`cron job started for ${pendingRequests}`)
+const commandToRun = 'npm install express';
+const videoPath = './videos/install_express.mp4';
 
-    for (const request of pendingRequests) {
-      await executeCommands(request);
+// Function to run a command and record the terminal activity
+const runAndRecordCommand = (command, outputPath) => {
+  // Start ffmpeg to record the terminal
+  const ffmpeg = spawn('ffmpeg', [
+    '-y', // Overwrite output files without asking
+    '-f', 'x11grab', // Grab the X11 display
+    '-s', '1920x1080', // Set the frame size
+    '-i', ':0.0', // Display to record, change if needed
+    '-r', '25', // Set the frame rate
+    '-q:v', '1', // Set the quality level
+    outputPath
+  ]);
+
+  ffmpeg.stderr.on('data', (data) => {
+    console.error(`ffmpeg error: ${data}`);
+  });
+
+  ffmpeg.on('close', (code) => {
+    console.log(`ffmpeg process exited with code ${code}`);
+  });
+
+  // Run the command
+  exec(command, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error executing command ${command}: ${stderr}`);
+    } else {
+      console.log(`Command ${command} executed successfully: ${stdout}`);
     }
 
-   
-  } catch (error) {
-    console.error('Error checking and executing requests:', error);
-  }
-};
-
-const executeCommands = async (request) => {
-  const commands = request.commands;
-  for (let i = 0; i < commands.length; i++) {
-    try {
-      await runCommand(commands[i]);
-    } catch (error) {
-      console.error('Command failed:', commands[i], 'Error:', error);
-      await runCommand(request.errorCommand);
-      break;
-    }
-  }
-
-  // Update status to completed
-  request.status = 'completed';
-  await request.save();
-};
-
-const runCommand = (command) => {
-  return new Promise((resolve, reject) => {
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Error executing command ${command}:`, stderr);
-        reject(error);
-      } else {
-        console.log(`Command ${command} executed successfully:`, stdout);
-        resolve(stdout);
-      }
-    });
+    // Stop ffmpeg after command execution
+    ffmpeg.kill('SIGINT');
   });
 };
 
-// Schedule the cron job to run every minute
-cron.schedule('* * * * *', checkAndExecuteRequests);
+runAndRecordCommand(commandToRun, videoPath);
